@@ -1,0 +1,17 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$main-color: #c3c3c3;
+$text-color: #cb42ee;
+body{
+	background-color: darken($main-color, 50%);
+}
+.container{
+	background-color: $main-color;
+	h1{
+		color: $text-color;
+	}
+	a{
+		color: darken($text-color, 20%);
+	}
+}

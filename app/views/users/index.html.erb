@@ -1,0 +1,15 @@
+<% content_for :left do %>
+	<p>content</p>
+	<% if @users %>
+	  <% @users.each do |user| %>
+	    <p>Name: <%= user.first_name %> <%= user.last_name %></p>
+	    <p>Email: <%= user.email %></p>
+	    <%= image_tag user.avatar.url %>
+	    <hr>
+	  <% end %>
+	<% end %>
+<p><a href="/users/new">Add new</a></p>
+<% end %>
+<% content_for :right do %>
+	<p>content</p>
+<% end %>

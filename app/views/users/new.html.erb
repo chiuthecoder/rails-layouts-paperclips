@@ -1,0 +1,30 @@
+<% content_for :right do %>
+<h1>Add a Use 123</h1>
+<script>
+
+</script>
+<%= form_for @user, :url => users_path, :html => {:multipart => true} do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <%= f.label :email %>
+  <%= f.text_field :email %>
+  <%= f.label :avatar %>
+  <%= f.file_field :avatar %>
+  <%= f.submit :submit %>
+<% end %>
+<!-- <form action="/users" method="post">
+	<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+	<div class="form-group">
+		<label for="name">Name</label>
+		<input type="text" class="form-control" name="name" placeholder="Your Name">
+	</div>
+	<div class="form-group">
+		<label for="email">Email</label>
+		<input type="text" class="form-control" name="email" placeholder="Email Address">
+	</div>
+	<button type="submit" class="btn btn default">Submit</button>
+</form> -->
+<% end %>
+
